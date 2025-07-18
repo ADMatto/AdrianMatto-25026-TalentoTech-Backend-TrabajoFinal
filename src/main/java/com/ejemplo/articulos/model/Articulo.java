@@ -14,13 +14,18 @@ public class Articulo {
 
     private String nombre;
     private Double precio;
+    private String imagen;
+    @Column(name = "descripcion", length = 1000)
+    private String descripcion;
 
     public Articulo() {}
 
-    public Articulo(Long id, String nombre, Double precio) {
+    public Articulo(Long id, String nombre, Double precio, String imagen, String descripcion) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
     }
 
     public Long getId() { return id; }
@@ -29,4 +34,8 @@ public class Articulo {
     public void setNombre(String nombre) { this.nombre = nombre; }
     public Double getPrecio() { return precio; }
     public void setPrecio(Double precio) { this.precio = precio; }
+    public String getImagen() { return imagen; }
+    public void setImagen(String imagen) { this.imagen = imagen;}
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion;}
 }
